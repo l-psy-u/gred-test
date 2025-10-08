@@ -1,0 +1,105 @@
+*{
+    border:1px solid red;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100vh;
+
+}
+
+.brown{
+    background-color: brown;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.orange{
+    background-color: orange;
+
+}
+
+.violet{
+    background-color: violet;
+}
+
+.green{
+    background-color: green;
+}
+.contenitore{
+    display: grid;
+    /* grid-template-rows: repeat(4,25vh); */
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+
+    /* grid-template-columns: 20vw 60vw 20vw; */
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "header header header"    
+    "menu main widget1"
+    "menu main widget2"
+    "footer footer footer";
+    /* align-items: center;  allinea gli elemti e (formano righe)*/
+    /* align-items: footer; */
+    column-gap: 32px;
+    row-gap: 16px;
+}
+.area-header{
+    grid-area: header;
+
+}
+.area-menu{
+    grid-area: menu;
+    
+}
+.area-main{ 
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "elem1 . ."
+    ". elem2  ."
+    ".  .  elem3";
+
+}
+.area-widget1{
+ 
+    grid-area: widget1;
+    
+}
+.area-widget2{
+ 
+    grid-area: widget2;
+}
+.area-footer{
+ 
+    grid-area: footer;
+    /* height: 100px; */
+    /* width: 100px; */
+    /* justify-self: center ;
+    align-self: center; */
+    /* width: 100px; se la mia width e fiaa la grid non fa il suo lavoro coorettamente  */
+    /* place-self: center; */
+}
+.elem1{
+    grid-area: elem1;
+    background-color: rgb(204, 204, 204);
+}
+.elem2{
+    grid-area: elem2;
+    background-color: rgb(158, 192, 34);
+}
+.elem3{
+    grid-area: elem3;
+    background-color: rgb(225, 13, 233);
+}
